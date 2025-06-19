@@ -1,0 +1,113 @@
+.cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(238, 240, 204);
+}
+
+/* Case acts as positioning context */
+.case {
+  position: relative;
+  width: 90vw;
+  height: 70vh;
+  background-color: rgb(159, 210, 151);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Screen centered in Case */
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:98%;
+  height: 95%;
+  background-color: black;
+  border-radius: 8px;
+}
+.screen-cont{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:65%;
+  height: 80%;
+  background-color: rgb(218, 214, 214);
+  border-radius: 8px;
+}
+
+/* Add to your existing Cover.css */
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 3; /* Make sure buttons appear above other elements */
+}
+
+
+/* Circular Control Pad */
+.controls {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  z-index: 10;
+  width: 100px;  /* Reduced from 80px */
+  height: 100px; /* Reduced from 80px */
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgb(142, 194, 134) 0%,
+    rgb(142, 194, 134) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 0 10px rgb(142, 194, 134),
+    inset 0 0 8px rgb(128, 177, 120);
+  padding: 5px;
+}
+
+/* Triangle Button Sizes - Made smaller */
+.triangle-button.up {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 14px 8px; /* Smaller than 12px/20px */
+}
+
+.triangle-button.down {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 14px 8px 0 8px; /* Smaller than 20px/12px */
+}
+
+.triangle-button.left {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 14px 8px 0; /* Smaller than 12px/20px */
+}
+
+.triangle-button.right {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 14px; /* Smaller than 12px/20px */
+}
+
+/* Movement Controls Container */
+.movement-controls {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
